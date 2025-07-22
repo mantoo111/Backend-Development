@@ -1,0 +1,68 @@
+Initial Steps:
+npm init -y (makes pakage,json file)
+npm install express (will make node module file)
+if u want to run your project with the name u want then go to pakage.json file there in script write:
+"start": "nodemon index"
+then on terminal write npm start
+
+
+
+backend takes two things request and response:
+->if from frontend to backend data is going then it is request
+->if from backend to frontend data is going then it is response
+js can not run on browser it need html to run ,so if only to run js write npm filename.js
+types of module are 
+core module
+local or custom module
+third party module :which we install and then they come into our systems
+
+/u can not only export module but variable can also be exported 
+//if the type is module then use import export but if you are using commonjs then require and export  is used
+HTTP methods:
+1-GET:to display,only get api will run in browser
+2-POST:isused when u want ur data will be secure and to send etc when ever data come from front use always post,will not run directly on browser
+
+to receive data from front end there are 3 ways:
+1-JSON(body):
+2-Querry:helps to get value from URL
+3-Params(Dynamic value):
+
+if your front send JSON data then it is mendatory to write his line in backend " .use(express.json()"
+jo data front se atta ha wo body ka nadr milta ha or jo data backend ka through jata wo response kazarye postman ma ponchta ha
+		Express.js Middleware:
+
+the thingthat is in between front and back or between request and response is called middlware
+middle has three parameter request ,response,next
+*before going on route it will be checked by middleware
+
+.env file:
+forthis u have to install: npm i dotenv
+it is used to store env variable ,those thing we want to keep save 
+JSON:java script object notation
+MongoDb:
+->mongodb is mostly used with Node.js
+->nosql is basically mongoDb
+show dbs:show list on DB
+use name:create 
+db.createCollection("name"):This will create a users collection(table) inside database
+db.name.drop():del the table
+db.name.renameCollection("newname"):for rename 
+db.dropDatabase():will drop the database
+db.name.insertOne(""):used to insert entity in the table
+db.StudentData.insertOne({
+  db.StudentName.insertOne({
+  "sName":"Ansa",
+    "sEmail":"ansa123@gmail.com"
+})
+
+for multiple use insertMany
+
+db.name.find().pretty():will 
+db.name.find({"sName":"arslan"}):used to find 
+db.StudentData.findOne({_id:ObjectId("6878b63cd7b6bfa1dfdbc4e6")}):if to find with id
+db.StudentData.deleteOne({_id:"6878b63cd7b6bfa1dfdbc4e6"}):to delete one we also have deletemany to del more than one entry
+db.StudentData.updateOne(
+  { _id: ObjectId("6878b63cd7b6bfa1dfdbc4e6") },
+  { $set: { sName: "ayesha malik", sEmail: "ayesha123@gmail.com" } }
+)
+:for updateOne
